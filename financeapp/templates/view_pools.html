@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Your Pools</h2>
+  <ul>
+    {% for pool in pools %}
+      <li>
+        {{ pool.name }} ({{ pool.distribution_percentage }}) - {{ pool.current_balance }}
+      </li>
+    {% empty %}
+      <li>No pools yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

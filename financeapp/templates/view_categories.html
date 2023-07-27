@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Your Categories</h2>
+  <ul>
+    {% for category in categories %}
+      <li>
+        {{ category.name }}
+      </li>
+    {% empty %}
+      <li>No categories yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
