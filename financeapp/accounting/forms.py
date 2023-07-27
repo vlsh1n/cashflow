@@ -1,5 +1,5 @@
 from django import forms
-from .models import Transaction, Category, Pool, StorageLocation
+from .models import Transaction, Category, Pool  #StorageLocation
 
 
 class TransactionForm(forms.ModelForm):

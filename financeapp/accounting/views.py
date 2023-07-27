@@ -10,7 +10,8 @@ from .models import Transaction, Category, Pool #StorageLocation
 
 # Main view for home page
 def home_view(request):
-    return render(request, 'home.html')
+    user = request.user
+    return render(request, 'home.html', {'user': user})
 
 
 # View for registration page
